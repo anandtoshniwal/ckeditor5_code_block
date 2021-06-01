@@ -1,0 +1,17 @@
+codeBlock:
+  remote: https://github.com/ckeditor/ckeditor5
+  Version: "27.0.0"
+  license: 
+    name: GNU-GPL-2.0-or-later
+    url: https://github.com/ckeditor/ckeditor5/blob/master/LICENSE.md
+    gpl-compatible: true
+  js:
+    js/build/code-block.js: { preprocess: false, minified: true }
+  dependencies:
+    - ckeditor5/ckeditor5
+
+
+admin.codeBlock:
+  css:
+    theme:
+      css/codeBlock.admin.css: { }

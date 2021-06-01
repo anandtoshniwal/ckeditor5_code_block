@@ -1,0 +1,16 @@
+codeBlock:
+  label: Code blocks
+  library: ckeditor5_code_block/codeBlock
+  admin_library: ckeditor5_code_block/admin.codeBlock
+  class: \Drupal\ckeditor5_code_block\Plugin\CKEditor5Plugin\CodeBlock
+  plugins: [codeBlock.CodeBlock]
+  plugin_config:
+    codeBlock:
+      languages:
+        - { language: 'css', label: 'CSS' }
+        - { language: 'html', label: 'HTML' }
+  toolbar_items:
+    codeBlock:
+      label: Code Block
+  elements:
+    - <code>

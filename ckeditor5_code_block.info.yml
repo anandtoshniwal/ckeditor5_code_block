@@ -1,0 +1,7 @@
+name: CKEditor 5 Code Block
+type: module
+description: "Provides CKEditor5 code block plugin."
+package: CKEditor 5
+core_version_requirement: ^9.2
+dependencies:
+  - drupal:ckeditor5
