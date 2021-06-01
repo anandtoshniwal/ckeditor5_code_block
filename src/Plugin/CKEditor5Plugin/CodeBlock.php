@@ -9,7 +9,7 @@ use Drupal\Core\Form\FormStateInterface;
 use Drupal\editor\Entity\Editor;
 
 /**
- * CKEditor5 Language plugin.
+ * CKEditor5 code blocks plugin.
  */
 class CodeBlock extends CKEditor5PluginDefault implements CKEditor5PluginConfigurableInterface, CKEditor5PluginContextualValidationInterface {
 
@@ -43,9 +43,6 @@ class CodeBlock extends CKEditor5PluginDefault implements CKEditor5PluginConfigu
 
   /**
    * {@inheritdoc}
-   *
-   * @see \Drupal\editor\Form\EditorImageDialog
-   * @see editor_image_upload_settings_form()
    */
   public function settingsForm(array $form, FormStateInterface $form_state, Editor $editor) {
     // Defaults.
@@ -82,13 +79,11 @@ class CodeBlock extends CKEditor5PluginDefault implements CKEditor5PluginConfigu
     foreach ($code_block_settings as $language) {
       if (!empty($language)) {
         $lang = explode('|', $language);
-        kint(strlen(trim($lang[1])));
         if (!strlen(trim($lang[0])) || !strlen(trim($lang[1]))) {
           $form_state->setErrorByName('code_block_languages', $this->t('Plesae enter languages in language|label format.'));
         }
       }
     }
-
   }
 
 }
